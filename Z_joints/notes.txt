@@ -1,0 +1,5 @@
+cannot reduce height(thick) of Z joint lower, because magnet must point to sensor under xy joint 
+unless both reduce 5mm
+
+
+

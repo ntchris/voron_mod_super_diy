@@ -1,0 +1,117 @@
+mellow ercf 
+===================================================================
+Step 1  Flash CANBOOT
+lsusb
+make flash FLASH_DEVICE=2e8a:0003
+
+
+
+
+chris@pi4printer:~/CanBoot $ python3 ~/CanBoot/scripts/flash_can.py -i can0 -q
+Resetting all bootloader node IDs...
+Checking for Katapult nodes...
+Detected UUID: efc740efc589, Application: Katapult  <== this is ERCF mellow canbus
+Query Complete
+
+If new node (mellow ERCF canbus) not found, could be because speed is not right
+need to 
+
+Using CANBOOT to flash Klipper firmware  (not flashing canboot)
+
+python3 ~/klipper/lib/canboot/flash_can.py -u efc740efc589 -f ~/ercf_mellow_klipper.bin
+
+bluelight D1 should flashing when CanBoot is flashed
+ (other two are for 5V and 24V power, constantly ON)
+
+===================================================================
+
+
+
+ pip3 install python-can
+
+
+python3  ~/klipper/scripts/canbus_query.py can0
+
+
+ sudo nano /etc/network/interfaces.d/can0
+
+
+1. after mellow RP2040 CAN tool head PCB flashed canboot bootloader, 
+(no need flash rp2040 can klipper firmware)
+this command should show it's can uuid ( along with the octopus 's uuid)
+
+python3 ~/klipper/lib/canboot/flash_can.py -i can0 -q
+
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -q
+
+
+
+
+chris@pi4octopi:~ $ python3 ~/CanBoot/scripts/flash_can.py -i can0 -q
+Resetting all bootloader node IDs...
+Checking for canboot nodes...
+Detected UUID: ac5a0c696f3a, Application: Klipper  <=== octopus already flashed Klipper.
+Detected UUID: 6220af9ec579, Application: CanBoot  <=== tool head can pcb only has canboot firmware boot loader, so it's CanBoot, so it's tool head pcb
+
+Query Complete
+
+
+Flash rp2040 klipper firmware (made by Klipper, not by CanBoot)
+ python3 ~/CanBoot/scripts/flash_can.py -i can0 -u 6220af9ec579 -f can_klipper_rp2040.bin
+
+
+
+After flash can tool head pcb rp2040 with Klipper firmware , it's now klipper
+/klipper $ python3 ~/CanBoot/scripts/flash_can.py -i can0 -q
+Resetting all bootloader node IDs...
+Checking for canboot nodes...
+Detected UUID: ac5a0c696f3a, Application: Klipper
+Detected UUID: 6220af9ec579, Application: Klipper  <=== 
+Query Complete
+
+
+
+if no uuid of rp2040, double check the can wires connection and canH canL correct? 
+important:
+
+  if use RJ21 connector box, the box may have different color wires, could be wrong color!
+  ignore the color of wires inside the box!!
+   ( the red could be CAN Low, green could be CAN HIGH)
+   shutdown everything's power, use multimeter to check connector inside the box to Octopus 's connector.
+   
+   can connector, starting  USB, no_con, no_con, canL , canH, no_con no_con
+   https://github.com/GadgetAngel/BTT_Octopus_Color_PIN_Diagram/blob/main/BTT_Octopus_V1.1_Color_PIN_Diagram/BIGTREETECH-Octopus-V1.1-color-PIN.jpg
+   
+   
+ 
+
+===================================================
+
+
+ls /dev/serial/by-id/*
+
+lsusb
+
+dfu-util -l
+
+sudo dfu-util -a 0 -D ~/CanBoot/octopus_canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11
+
+
+
+
+
+this is octopus can id
+
+chris@pi4octopi:~/klipper $ cd ~/CanBoot/scripts
+chris@pi4octopi:~/CanBoot/scripts $ python3 flash_can.py -i can0 -q
+Resetting all bootloader node IDs...
+Checking for canboot nodes...
+Detected UUID: ac5a0c696f3a, Application: Klipper
+Query Complete
+
+
+python3 flash_can.py -f ~/klipper/klipper_octopus_can.bin -d  /dev/serial/by-id/usb-CanBoot_stm32f446xx_260020000951313133353932-if00
+
+
+
+
