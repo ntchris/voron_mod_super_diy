@@ -111,8 +111,9 @@ config file name ercf_hardware_mellow_canbus.cfg, include this file in the main 
 set the CAN id
 ```
 [mcu ercf]
-canbus_uuid:  efc740efc589
+canbus_uuid:  efc74####c589 (your mileage may vary, your CAN ID is very different)
 ```
+
 for physical selector endstop pin (even though we are using sensorless homing, physical selector is still needed, because Happy Hare can use that to detect a true home position VS blocked by filament.
 ```
 [manual_extruder_stepper gear_stepper]
@@ -126,7 +127,7 @@ diag_pin: ercf:gpio22	# Set to MCU pin connected to TMC DIAG pin, pullup is not 
 # no need to make selector stepper motor current as low as possible, since select motor rarely move
 # if current is too low, 
 run_current: 0.55
-driver_SGTHRS: 70		# 255 is most sensitive value, 0 is least sensitive
+driver_SGTHRS: 70		# 255 is most sensitive value, 0 is least sensitive, adjust according to your setup
 ```
 
 
@@ -151,7 +152,14 @@ Endstop MANUAL_STEPPER SELECTOR_STEPPER OPEN
 
 ```
 [ercf_servo ercf_servo]
-pin: ercf:gpio21
+pin: ercf:gpio21   # mellow ercf
+```
+
+
+```
+## ENCODER -----------------------------------------------------------------------------------------------------------------
+[ercf_encoder ercf_encoder]
+encoder_pin: ^ercf:gpio15	  # mellow ercf
 ```
 
 ercf_paramenters.cfg
