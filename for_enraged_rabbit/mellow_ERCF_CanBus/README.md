@@ -1,5 +1,8 @@
 # ERCF Setting Notes for Mellow ERCF CAN BUS board
 
+This is the Mellow ERCF canbus board
+![mellow ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_canbus_pcb.png)
+
 There are so many combination in the combination, so I think a HW/SW config note is necessary.
 A few key points:
 Using SensorLess Selector Homing
