@@ -3,8 +3,8 @@
 This is the Mellow ERCF canbus board
 ![mellow ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_canbus_pcb.png)
 
-There are so many combination in the combination, so I think a HW/SW config note is necessary.
-A few key points:
+There are so many combination in the configuration when using ERCF, see below, using sensorless homing...., so I think a HW/SW config note is necessary.
+### A few key points in the config:
 Using SensorLess Selector Homing
 Mellow ERCF Board supporting Canbus
 Using CANBUS (not USB) to Klipper mother board
@@ -35,7 +35,11 @@ diag micro switch must move to ON position ( ON position, not 1, low )
 ![TMC2209 diag switch](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_tmc2209_sensorless.jpg)
 
 
-
+4 Always double check all plug's wires polarity. 
+  I am moving from Fysetc's ERCF (usb interface) to this, so quite a fiew wire need to mod.
+  mechanical micro switch end stop.
+  optical encoder
+  no need for stepper motor
 
 ### Flashing CANBOOT for ERCF board
 
