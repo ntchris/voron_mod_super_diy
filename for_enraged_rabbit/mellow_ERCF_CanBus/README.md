@@ -184,13 +184,15 @@ To help to let ERCF always enabled after printer restart, can use this version o
 Use ERCF_home and ERCF__SELECT_TOOL TOOL=5 to test selector.
 If selector cannot move and have red error inside mainsail
 > An issue with the ERCF has been detected...Selector recovery failed. Path is probably internally blocked and unable to move filament to clear
+
 must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
 
 ## Trouble shooting
 ### Mainsail cannot boot, firmware restart / restart error in webpage.
+
 Probably the CAN wire is not properly connected in ERCF board. 
-Consider replug in the 24V/Can Plug in the mellow ERCF board.
+Consider replug in /plug in hard the 24V/CAN connector in the mellow ERCF board.
 
 ### when move, selector goes to wrong direction - left / right
 depends on the stepper motor wiring, the direction could be reverted.
@@ -204,16 +206,25 @@ refer above
 
 ### selector cannot move and have red error inside mainsail
 > An issue with the ERCF has been detected...Selector recovery failed. Path is probably internally blocked and unable to move filament to clear
-must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
+
+Solution: Must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
 
-### can id cannot query, always zero can device returned
+### CAN id cannot query, always has zero CAN device returned
 
-python3  ~/klipper/scripts/canbus_query.py can0
+> python3  ~/klipper/scripts/canbus_query.py can0
 or 
-python3 ~/klipper/lib/canboot/flash_can.py -i can0 -q
-unfortunately, when everything is working correctly, can ID cannot show!
+> python3 ~/klipper/lib/canboot/flash_can.py -i can0 -q
+
+Solution: unfortunately, when everything is working correctly, CAN ID cannot show!
 (true to klipper mother board, toolhead, ercf board)
+My understanding is, when the device has only CANBOOT flashed, it can show CANID.
+after we config the CANID in the printer config file and they are all working well, CANID won't shown again.
+```
+python3  ~/klipper/scripts/canbus_query.py can0
+Total 0 uuids found
+SocketcanBus was not properly shut down
+```
 
 
 
@@ -228,12 +239,14 @@ https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/board/fly_
 Mellow ERCF Canbus board
 https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/board/fly_ercf/README
 
-happyhare
+happyhare ERCF software
 https://github.com/moggieuk/ERCF-Software-V3
 
 Mellow CanBoot
 https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/advanced/canboot
 
+how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot
+https://www.teamfdm.com/forums/topic/672-how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot/
 
 
 
