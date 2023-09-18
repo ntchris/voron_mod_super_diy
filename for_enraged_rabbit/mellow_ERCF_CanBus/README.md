@@ -167,6 +167,12 @@ ercf_paramenters.cfg
 sensorless_selector: 1		# 0 = use only a physical endstop, 1 = use advanced sensorless selector homing
 ```
 
+Using HappyHare, should always sync to extruder, so to let ERCF help to pull the filament out from buffer, otherwise the printer's toolhead extruder may not have enough power to pull and the print will have big problem.
+```
+sync_to_extruder: 1		# Gear motor is synchronized to extruder during print  
+```
+To help to let ERCF always enabled after printer restart, can use this version of ERCF ercf.py, https://github.com/ntchris/ERCF-Software-V3/blob/master/extras/ercf.py
+
 ## Testing sensorless selector home
 Use ERCF_home and ERCF__SELECT_TOOL TOOL=5 to test selector.
 If selector cannot move and have red error inside mainsail
