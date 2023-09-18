@@ -3,14 +3,14 @@
 This is the Mellow ERCF canbus board
 ![mellow ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_canbus_pcb.png)
 
-There are so many combination in the configuration when using ERCF, see below, using sensorless homing...., so I think a HW/SW config note is necessary.
+There are so many combination in the configuration when using ERCF, see below..., so I think a HW/SW config note is necessary.
 ### A few key points in the config:
-Using SensorLess Selector Homing
-Mellow ERCF Board supporting Canbus
-Using CANBUS (not USB) to Klipper mother board
-My Klipper mother board is Optopus but it shouldn't matter
-Using HappyHare ERCF Software V3 (https://github.com/moggieuk/ERCF-Software-V3). ( original ERCF fw has quite different config file)
-Tool head has no hallsensor or mechanical microswitch sensor, since not needed ( but PTFE Pneumatic fitting to lock the PTFE (2.5 ID mm/4mm OD) is needed since ptfe tube must be locked tight to the tool head. 
+* Using SensorLess Selector Homing
+* Mellow ERCF Board supporting Canbus
+* Using CANBUS (not USB) to Klipper mother board
+* My Klipper mother board is Optopus but it shouldn't matter
+* Using HappyHare ERCF Software V3 (https://github.com/moggieuk/ERCF-Software-V3). ( original ERCF fw has quite different config file)
+* Tool head has no hallsensor or mechanical microswitch sensor, since not needed ( but PTFE Pneumatic fitting to lock the PTFE (2.5 ID mm/4mm OD) is needed since ptfe tube must be locked tight to the tool head. 
 
 ## Mellow ERCF Canbus Board preparation
 ### Hardware Jumper config
