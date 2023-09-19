@@ -32,6 +32,9 @@ uart jumper
 ![uart jumper setting](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_uartmode.jpg)
 
 no other jumper is needed, diag doesn't need jumper.
+BTW The Jumper picture in Mellow ERCF's webpage is wrong, probably someone just copy paste from their klipper mother board.
+https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/board/fly_ercf/pins
+
 
 3 mellow TMC2209 driver stick setting for DIAG PIN.
 diag micro switch must move to ON position ( ON position, not 1, low )
