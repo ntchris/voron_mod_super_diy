@@ -1,4 +1,8 @@
-# ERCF Setting Notes for Mellow ERCF CAN BUS board
+# ERCF Hardware and Software Config and Setting Notes for Mellow ERCF CAN BUS board
+
+ERCF = Enraged Rabbit Carrot Feeder
+Voron Printers like 2.4.
+Fysetc and Mellow is/are 3D printer parts/electronics vendor(s)
 
 This is the Mellow ERCF canbus board
 ![mellow ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_canbus_pcb.png)
@@ -262,6 +266,6 @@ https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/advanced/c
 how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot
 https://www.teamfdm.com/forums/topic/672-how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot/
 
-
-
+voron_canbus_octopus_sb2040
+https://github.com/akhamar/voron_canbus_octopus_sb2040
 
