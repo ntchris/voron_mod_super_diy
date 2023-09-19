@@ -35,11 +35,18 @@ diag micro switch must move to ON position ( ON position, not 1, low )
 ![TMC2209 diag switch](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_tmc2209_sensorless.jpg)
 
 
-4 Always double check all plug's wires polarity. 
-  I am moving from Fysetc's ERCF (usb interface) to this, so quite a fiew wire need to mod.
-  mechanical micro switch end stop.
-  optical encoder
-  no need for stepper motor
+4 Always double check all plug/connector's wires definition/polarity. 
+  I am moving from Fysetc's ERCF (usb interface) bundle, with ERCF PCB and all the servo and encoder, wires and everything to this Mellow CANBUS board, so quite a few wires need to modify.
+  * mechanical micro switch endstop. Fysetc connector/wire order may directly short the 3.3V and GND on Mellow ERCF and cause a disaster, we can simply move one wire to the other side, GPIO20 and GND. Leave 3.3V not used.
+  * optical encoder. Need reorder wires for 3.3V, GND, and GPIO to the correct order, can do this on the XH254 or Dupon side. a good practise is to use red for 5V/3.3V, black for GND, other color for signal/GPIO. so we won't accidentally fry any devices.
+  * Check servo wire/connector, they are in wrong order, I just removed the XH254 socket on the mellow ERCF board and put it back in but rotated 180Deg. Seems easy.
+  * no need to change stepper motor wiring(if not working correctly, simpily change DIR pin in config file)
+  Always refer to Mellow's official pin definition.  https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/board/fly_ercf/pins
+  or this pin picture (Note, they may have new version hardware in future and this Pin picture could expire, use at your own risks)
+  ![mellow ercf pin](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/mellow_ERCF_CanBus/mellow_ercf_pins.jpg)
+
+  
+  
 
 ### Flashing CANBOOT for ERCF board
 
@@ -210,16 +217,22 @@ refer above
 Solution: Must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
 
+### stepper motor (selector or gear ) does nothing but very hot.
+Check the stepper motor enable pin in ercf hardware config file, may need to remove the ! (revert sign)
+With the wrong revert sign, when doing nothing, the motor is enabled/coil(s) is(are) powered on. so it gets hot.
+
 ### CAN id cannot query, always has zero CAN device returned
 
 > python3  ~/klipper/scripts/canbus_query.py can0
 or 
 > python3 ~/klipper/lib/canboot/flash_can.py -i can0 -q
 
-Solution: unfortunately, when everything is working correctly, CAN ID cannot show!
+Solution: If everything is working well already, nothing is need to be fixed.
+Unfortunately, when everything is working correctly, CAN ID cannot query or show!
 (true to klipper mother board, toolhead, ercf board)
 My understanding is, when the device has only CANBOOT flashed, it can show CANID.
 after we config the CANID in the printer config file and they are all working well, CANID won't shown again.
+If it's not working, flash CANBOOT correctly with the right speed(using USB cable + Pi)
 ```
 python3  ~/klipper/scripts/canbus_query.py can0
 Total 0 uuids found
@@ -247,6 +260,7 @@ https://mellow.klipper.cn/?spm=a2g0o.detail.1000023.3.13e16cccOvvDGr#/advanced/c
 
 how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot
 https://www.teamfdm.com/forums/topic/672-how-to-use-can-toolhead-boards-connected-directly-to-octopus-octopus-pro-on-canboot/
+
 
 
 
