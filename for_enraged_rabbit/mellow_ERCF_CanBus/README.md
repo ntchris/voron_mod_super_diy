@@ -37,7 +37,8 @@ diag micro switch must move to ON position ( ON position, not 1, low )
 
 4 Always double check all plug/connector's wires definition/polarity. 
   I am moving from Fysetc's ERCF (usb interface) bundle, with ERCF PCB and all the servo and encoder, wires and everything to this Mellow CANBUS board, so quite a few wires need to modify.
-  * mechanical micro switch endstop. Fysetc connector/wire order may directly short the 3.3V and GND on Mellow ERCF and cause a disaster, we can simply move one wire to the other side, GPIO20 and GND. Leave 3.3V not used.
+  * mechanical micro switch endstop connector mod. Fysetc connector/wire order may directly short the 3.3V and GND on Mellow ERCF and cause a disaster, we can simply move one wire to the other side on the XH254 plug, use only GPIO20 (left) and GND(middle), and leave 3.3V (right)not used. mechanical micro switch doesn't care about which is GND which is GPIO, but a good practise is use Black for GND.
+  Do not plug in the connector without modding it first, instant short, (it's a normally close switch)
   * optical encoder. Need reorder wires for 3.3V, GND, and GPIO to the correct order, can do this on the XH254 or Dupon side. a good practise is to use red for 5V/3.3V, black for GND, other color for signal/GPIO. so we won't accidentally fry any devices.
   * Check servo wire/connector, they are in wrong order, I just removed the XH254 socket on the mellow ERCF board and put it back in but rotated 180Deg. Seems easy.
   * no need to change stepper motor wiring(if not working correctly, simpily change DIR pin in config file)
