@@ -229,6 +229,15 @@ If current is too low and driver is too sensitive, it cannot move because the re
 Check the stepper motor enable pin in ercf hardware config file, may need to remove the ! (revert sign)
 With the wrong revert sign, when doing nothing, the motor is enabled/coil(s) is(are) powered on. so it gets hot.
 
+### when use selector sensorless home, when it home and hit the end, always or very high chance has a TIME TOO CLSOE red error.
+check manual_stepper selector_stepper in hardware config file, change microsteps to 8 from 16.
+or, use a spacer on each of the M8 rod for selector rail, to adjust when it hits the wall.
+The timer error seems to be caused by the hit wall timing and endstop switch trigger time.
+I did not have the time too close error before I added two spacers(1mm) in the end of the M8 rod,
+but after add (to make a solid wall), there is such error.
+and the thickness is also important, when I use 0.8mm, no error, 1mm has error, so I have to use step=8 to get rid of the error.
+I guess micro step=8 should be good enough for the selector motor accuracy...
+
 ### CAN id cannot query, always has zero CAN device returned
 
 > python3  ~/klipper/scripts/canbus_query.py can0
