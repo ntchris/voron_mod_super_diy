@@ -365,6 +365,7 @@ https://github.com/akhamar/voron_canbus_octopus_sb2040
 optical light sensor endstop
 button style
 https://www.printables.com/model/598672-ercf-enraged-rabbit-button-style-optical-endstop-f
+
 light blocker style
 https://www.printables.com/model/596286-ercf-enraged-rabbit-optical-endstop-for-selector
 
