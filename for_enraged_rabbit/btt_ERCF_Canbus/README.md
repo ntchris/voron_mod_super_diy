@@ -298,6 +298,21 @@ All connection is now finished.
 1. Connect the supplied power cable with Can.
 1. No USB cable is needed.
 Do a ERCF home and other motor and sensor action, we can verify each item.
+1. run servo up and down command to test servo  ERCF_SERVO_UP
+1. while servo is up, pull/run a filament in ERCF, optical sensor or Rabbit's eyes should flash, it means the sensor connection is good.
+1. test endstop
+```
+Go to mainsail -> machine -> Endstop query
+when selector not touching endstop
+below two should be OPEN:
+Endstop MANUAL_EXTRUDER_STEPPER GEAR_STEPPER OPEN
+Endstop MANUAL_STEPPER SELECTOR_STEPPER OPEN
+
+When selector pushing endstop, gear stepper should be triggered
+(that's right, HappyHare use the endstop inside gear stepper, not selector stepper):
+Endstop MANUAL_EXTRUDER_STEPPER GEAR_STEPPER Triggered
+Endstop MANUAL_STEPPER SELECTOR_STEPPER OPEN
+```
 
 
 #### Testing sensorless selector home
