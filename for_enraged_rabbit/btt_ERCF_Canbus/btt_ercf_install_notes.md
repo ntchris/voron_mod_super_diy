@@ -3,6 +3,8 @@
 
 BTT calls this board 
 "BIGTREETECH MMB CAN V1.0 Board Enraged Rabbit Carrot Feeder ERCF Control Board CAN Bus" 
+btt_ercf_canbus.jpg
+![BTT ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/btt_ercf_canbus.jpg)
 
 ## What is it
 I assume you all know what is this and what this for?
@@ -46,6 +48,9 @@ choose below options
 CanBus speed -- 1000000 (six zero, this is my speed, some people use 500000(5 zero).  It must be the same exact speed as the Pi4 in Voron printer/Tool Head CAN bus is running, must must be the same. )
 * Support bootload entry....
 Press Q and Save
+
+![canboot make menu](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/canboot_makemenu.jpg)
+
 
 run make to build the CanBoot firmware.
 the CanBoot firmware file shall be built and put inside home/pi(or your user name)/CanBoot/out/canboot.bin
@@ -110,6 +115,8 @@ Comm Interface CanBus PB0/PB1
 1000000 CAN speed
 run make, we will have klipper.bin in out dir.
 
+![klipper make menu](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/klipper_makemenu.jpg)
+
 1. use CanBoot to flash the klipper firmware, replace the can id with the actual one from query output.
 ```
 python3 flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u e8d2d1c60b3f
@@ -167,6 +174,8 @@ use the CAN ID we copied from previous step, set it in the config file
 canbus_uuid=e8d2d1c60b3f
 ```
 #### Stepper motor
+![motor pin btt ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/btt_ercf_canbus.jpg))
+
 1. btt ercf has 4 stepper motor slots, each one can work as selector motor or gear_stepper motor. I choose 2nd as selector and 4th as gear stepper.
 1. check motor pins fo pin names. 
 1. gear motor part 1(4th slot)
@@ -273,7 +282,7 @@ upload this file to Voron/PI, restart firmware, it should apply.
 
 ### ERCF connection
 Still, power off the ERCF, now power cable at all while connecting things.
-1. use some thick paper/tissue to hold the EZ driver board, straight edge facing up, a bump edge facing down to the slot ( the slot has a cut out to hold that small bump edge). Push it very hard in to the EZ driver slot. We use paper to hold so fingers won't get hurt by the PCB/glass fiber.
+1. use some thick paper/tissue to hold the EZ driver board, straight edge facing up, a 45Degree bump edge (with a screw) facing down to the slot ( the slot has a cut out to hold that small 45Degree bump edge). Push it very hard in to the EZ driver slot. We use paper to hold so fingers won't get hurt by the PCB/glass fiber.
 1. double check driver's voltage jumper, VIN, diag2  (or other slot's Diag pin)
 1. install two EZ driver to 2nd and 4th slot. (If you choose to use other slot, must change all the driver pins in the config file)
 1. connect servo connector, it's the 1st vertial socket, check the servo wire/pin definition, order is 5V/GND/Signal...basically all the connectors in BTT ERCF have the same order (except RGB, since it's not covered by this note, ignore it for now)
@@ -286,6 +295,8 @@ connect all 5V G Signal.
 All connection is now finished.
 
 ### Power on Voron and Run some ERCF test
+1. Connect the supplied power cable with Can.
+1. No USB cable is needed.
 Do a ERCF home and other motor and sensor action, we can verify each item.
 
 
