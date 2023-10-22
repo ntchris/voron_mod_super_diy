@@ -174,7 +174,7 @@ use the CAN ID we copied from previous step, set it in the config file
 canbus_uuid=e8d2d1c60b3f
 ```
 #### Stepper motor
-![motor pin btt ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/btt_ercf_canbus.jpg))
+![motor pin btt ercf](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/motor_pins.jpg))
 
 1. btt ercf has 4 stepper motor slots, each one can work as selector motor or gear_stepper motor. I choose 2nd as selector and 4th as gear stepper.
 1. check motor pins fo pin names. 
