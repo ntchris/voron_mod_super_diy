@@ -1,5 +1,8 @@
 mellow ercf 
 ===================================================================
+
+Do not plug in resistor Jumper since toolhead already has it.
+
 Step 1  Flash CANBOOT
 lsusb
 make flash FLASH_DEVICE=2e8a:0003
