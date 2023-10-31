@@ -1,7 +1,7 @@
-# ERCF Easy Optical
+# ERCF Easy Optical Encoder Module
 For ERCF: to make it easier for everyone to use a transmissive optical sensor
 
-in one simple sentence, a much cheaper and easier blinky sensor module for ERCF.
+in one simple sentence, a DIY friendly, a much cheaper and easier blinky sensor module for ERCF.
 
 
 ![ercf easy optical](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/3d_view2.jpg)
