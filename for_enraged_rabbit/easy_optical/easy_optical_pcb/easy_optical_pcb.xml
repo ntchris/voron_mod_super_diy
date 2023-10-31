@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>F:\GitHubRoot\voron_mod_super_diy\for_enraged_rabbit\easy_optical\easy_optical_pcb\easy_optical_pcb.kicad_sch</source>
+    <date>2023-10-30 11:20:50 PM</date>
+    <tool>Eeschema 7.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>easy_optical_pcb.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1u</value>
+      <footprint>myFootPrintLib:C_0805_2012Metric_Pad1.20x1.50mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f372ed8c-9b6e-4beb-9788-c427f724758b</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>10u</value>
+      <footprint>myFootPrintLib:C_0805_2012Metric_Pad1.20x1.50mm_HandSolder</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d318bf9b-4d30-4263-9efa-fa81d0b7c56a</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>myFootPrintLib:LED_D3.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Light emitting diode"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>99b5b49b-48d0-4ad5-b3a2-1dd16fa787b8</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>myFootPrintLib:MountingHole_2.1mm</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6e33346-4f88-46a7-bbc1-14c9dbf3bc2e</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x03</value>
+      <footprint>myFootPrintLib:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0d22c5c4-5308-4dab-9d36-47da974f48ab</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3402_N_Mosfet</value>
+      <footprint>myFootPrintLib:SOT-23_PMOSFET</footprint>
+      <libsource lib="mySymbolLibrary" part="AO3402_N_Mosfet" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad966383-72f7-496e-b695-6db90e3d5756</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>myFootPrintLib:R_0805_2012Metric_Pad1.20x1.50mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>248fb366-f837-495d-abe9-ede766bc1368</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>myFootPrintLib:R_0805_2012Metric_Pad1.20x1.50mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54087af3-02ff-492c-ad56-b224b8c77caa</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>1k</value>
+      <footprint>myFootPrintLib:R_0805_2012Metric_Pad1.20x1.50mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>66aed1d3-e8c0-4b8b-a774-208667aa2ae1</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>0</value>
+      <footprint>myFootPrintLib:R_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6325e0f5-b173-493a-bf71-3b0d3a02cab0</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ITR20403</value>
+      <footprint>myFootPrintLib:Optical_ITR20403</footprint>
+      <datasheet>https://everlighteurope.com/index.php?controller=attachment?id_attachment=5394</datasheet>
+      <libsource lib="mySymbolLibrary" part="ITR20403" description="Photointerrupter infrared LED with photo IC, -25 to +85 degree Celsius"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="easy_optical_pcb.kicad_sch"/>
+      <property name="ki_description" value="Photointerrupter infrared LED with photo IC, -25 to +85 degree Celsius"/>
+      <property name="ki_keywords" value="Photointerrupter opto interrupter infrared LED fast response time infrared 940nm 5mm gap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b47ffa51-14b6-4013-b307-09d8c3f8ac5e</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D1</field>
+        <field name="Value">LED</field>
+        <field name="Footprint">myFootPrintLib:LED_D3.0mm</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="K" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="mySymbolLibrary" part="AO3402_N_Mosfet">
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3402_N_Mosfet</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="D" name="D" type="passive"/>
+        <pin num="G" name="G" type="input"/>
+        <pin num="S" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="mySymbolLibrary" part="ITR20403">
+      <description>Photointerrupter infrared LED with photo IC, -25 to +85 degree Celsius</description>
+      <docs>https://everlighteurope.com/index.php?controller=attachment?id_attachment=5394</docs>
+      <footprints>
+        <fp>*ITR9608*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">ITR20403</field>
+        <field name="Footprint">myFootPrintLib:Optical_ITR20403</field>
+        <field name="Datasheet">https://everlighteurope.com/index.php?controller=attachment?id_attachment=5394</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="open_collector"/>
+        <pin num="4" name="" type="open_emitter"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="mySymbolLibrary">
+      <uri>F:\GitHubRoot\ElectronicDesign\MyKiCadLibs/mySymbolLibrary.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q1" pin="S" pinfunction="S" pintype="passive"/>
+      <node ref="U1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pintype="open_emitter"/>
+    </net>
+    <net code="2" name="Net-(D1-PadA)">
+      <node ref="D1" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="3" name="Net-(D1-PadK)">
+      <node ref="D1" pin="K" pinfunction="K" pintype="passive"/>
+      <node ref="Q1" pin="D" pinfunction="D" pintype="passive"/>
+    </net>
+    <net code="4" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="VCC">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="signal">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="G" pinfunction="G" pintype="input"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pintype="open_collector"/>
+    </net>
+    <net code="7" name="signal_R0">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+  </nets>
+</export>
