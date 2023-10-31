@@ -826,7 +826,7 @@
   )
 
   (text "if 500R is too bright for a 3mm led, ...it should be too bright for optical sensor!!"
-    (at 83.82 62.23 0)
+    (at 71.12 110.49 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 748b68b1-0ea5-4dd6-b81d-eac95c01c550)
   )

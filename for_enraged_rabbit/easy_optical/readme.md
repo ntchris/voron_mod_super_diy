@@ -4,6 +4,8 @@ For ERCF: to make it easier for everyone to use a transmissive optical sensor
 in one simple sentence, a much cheaper and easier blinky sensor module for ERCF.
 
 
+![ercf easy optical](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/3d_view2.jpg)
+
 ## What is this:
 
 for ERCF (Enraged Rabbit Carrot Feeder Multiple Material System for Voron or alike 3D printers)
@@ -32,6 +34,13 @@ https://everlighteurope.com/index.php?controller=attachment?id_attachment=5394 c
 * using a 3mm through hole LED, it fits the rabbit eyes much better and brighter.
 * Kicad 7 is used to create the schematics and PCB. full schematics/PCB project/source are provided
 
+![ercf easy optical](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/3d_view1.jpg)
+
+![ercf easy optical pcb a](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/pcb_3D_a.jpg)
+
+![ercf easy optical pcb a](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/pcb_3D_b.jpg)
+
+
 ## Things to pay attention while making the PCB at home.
 * Only front side of the PCB is needed, back side is not needed, just optional.
 * for single side PCB, the 3pins connector must be soldered on the front side of the PCB, because the back side has no copper. 
@@ -54,6 +63,8 @@ https://everlighteurope.com/index.php?controller=attachment?id_attachment=5394 c
 * U1	1	ITR20403  optical sensor
 
 ## Operation theory
+![easy optical schematics](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/schematics.jpg)
+
 It couldn't be simpler and easier than this.
 * When the ITR20403 sensor is power on, R1 (1K) resistor make 5V power supply to provide and reduce a suitable current for the sensor's infrared led, about (5-2)/1k = ~~3ma.
 * When nothing blocking, the infrared light fire on the other side collector/emitter, so it's kind of connected, so our signal termial has about 0V, low.
@@ -71,12 +82,12 @@ The 3D pirnted part is modified based on binky's encoder however made quite a fe
 
 ### modification list:
 
-1 larger cut for optical sensor, so it fits IT20403  ( 7mm for sensor 6.4mm width, 4.7mm for 4.2mm length.), it's slightly larger than the sx1103 (in binky pcb), but much much cheaper than SX1103. ITR20403 is only a bit wider than it (6.4mm VS 5mm).
-2 larger LED hole so it fits for through hole 3mm led, and the led's bottom is even larger ( I think it's the smallest through hole cheap led in the market)
-3 very very slightly larger (0.02mm) slot wheel, and tighter fit on bondtech gear. So it won't easily move on the bondtech gear. also it can block the light better.
-4 0.2mm lower pcb mount position so to let slot wheel fit deeper/better in the optical sensor
-5 larger gap in the brake, so it doesn't get stuck with main body
-6 thicker gear slot wheel (1.2mm now), so it can block light better.
+1. larger cut for optical sensor, so it fits IT20403  ( 7mm for sensor 6.4mm width, 4.7mm for 4.2mm length.), it's slightly larger than the sx1103 (in binky pcb), but much much cheaper than SX1103. ITR20403 is only a bit wider than it (6.4mm VS 5mm).
+1. larger LED hole so it fits for through hole 3mm led, and the led's bottom is even larger ( I think it's the smallest through hole cheap led in the market)
+1. very very slightly larger (0.02mm) slot wheel, and tighter fit on bondtech gear. So it won't easily move on the bondtech gear. also it can block the light better.
+1. 0.2mm lower pcb mount position so to let slot wheel fit deeper/better in the optical sensor
+1. larger gap in the brake, so it doesn't get stuck with main body
+1. thicker gear slot wheel (1.2mm now), so it can block light better.
   I don't think color matters, as long as it's not translucent. (I used grey color to print that on purpose to prove that. )
 
 ## Installation
@@ -89,13 +100,14 @@ The 3D pirnted part is modified based on binky's encoder however made quite a fe
 * add some suitable oil inside the bondtech gear idler.
 
 ## check again ercf is restored in proper working state after new encoder installation,  check points and potential problems are:  
-* latchs are locked again
+* 2 X latches are locked again
 * servo can move do up and down correctly, if it cannot move down correctly, it cannot push the bondtech gear to hold the filament tight, so filament cannot move correctly, making sensor cannot detect movement.
 * selector can move freely. turn motor off ( ercf_motors_off), move selector by hand to feel if there is any resistance, if so, use a file tool to fix it.
+* some filament can be grinded and wear out so bondtech gear cannot catch it well, observe, see if filament are actually moving out and in to the correct distance when running the calibrate command, we can easily tell if this problem happens. (It happened to my ABS, too soft and easily grinded out)
 
 ## Testing
-* insert a filament in encoder, check rabbit eyes are blinking , (only if all optional LED components are installed /soldered)
-* use gcode command ERCF_CALIBRATE_ENCODER for a few times, it should always have a result of 2.0#.
+* insert a filament in encoder, while pulling it in and out, check rabbit eyes are blinking , (only if all optional LED components are installed /soldered)
+* use gcode command ERCF_CALIBRATE_ENCODER for a few times, it should always have a result of 2.0#, it shouldn't be too much difference than 2.0 something. If not, need to investigate.
 
-
+![ercf test log](https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/easy_optical/ercf_log.jpg)
 
