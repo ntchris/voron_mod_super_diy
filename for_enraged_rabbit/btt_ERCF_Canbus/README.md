@@ -315,13 +315,19 @@ Endstop MANUAL_STEPPER SELECTOR_STEPPER OPEN
 ```
 
 
-#### Testing sensorless selector home
+### Testing and Trouble shooting for all possible problems:
+
+#### selector cannot move or can only move a little bit.
+
 Use ERCF_home and ERCF__SELECT_TOOL TOOL=5 to test selector.
 If selector cannot move and have red error inside mainsail
 > An issue with the ERCF has been detected...Selector recovery failed. Path is probably internally blocked and unable to move filament to clear
 
-must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
+Solution is to set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
+Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a horrible and expensive "Voltage too low" error.
+
+
 
 #### Mainsail cannot boot, firmware restart / restart error in webpage.
 
@@ -335,18 +341,18 @@ can be fixed by reverting the dir pin by adding or removing !
 dir_pin: !ercf:
 dir_pin: ercf:
 ```
-### selector cannot move and have red error inside mainsail
+#### selector cannot move and have red error inside mainsail
 > An issue with the ERCF has been detected...Selector recovery failed. Path is probably internally blocked and unable to move filament to clear
 
 Solution: Must set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high. 
 It thinks it hits the end wall.
 
-### stepper motor (selector or gear ) does nothing but very hot.
+#### stepper motor (selector or gear ) does nothing but very hot.
 Check the stepper motor enable pin in ercf hardware config file, may need to remove the ! (revert sign)
 With the wrong revert sign, when doing nothing, the motor is enabled/coil(s) is(are) powered on. so it gets hot.
 
-### when use selector sensorless home, when it home and hit the end, always or very high chance has a TIME TOO CLSOE red error.
+#### when use selector sensorless home, when it home and hit the end, always or very high chance has a TIME TOO CLSOE red error.
 check manual_stepper selector_stepper in hardware config file, change microsteps to 8 from 16.
 or, use a spacer on each of the M8 rod for selector rail, to adjust when it hits the wall.
 The timer error seems to be caused by the hit wall timing and endstop switch trigger time.
@@ -355,7 +361,19 @@ but after add (to make a solid wall), there is such error.
 and the thickness is also important, when I use 0.8mm, no error, 1mm has error, so I have to use step=8 to get rid of the error.
 I guess micro step=8 should be good enough for the selector motor accuracy...
 
+#### ERCF has too large of a delta value when home (after home)
+After home, selector will move from zero position to T0. after it's done, ERCF will check the attempt travel and actual travel distance by some means. (Planned travel is T0 position , "actual" travel is from MCU. This is not a close loop system)
+If see this error sometimes:
+>An issue with the ERCF has been detected whilst out of a print
+Reason: Selector recovery failed. Path is probably internally blocked and unable to move filament to clear
+> selector move delta is too large, most likely it's because selector driver_SGTHRS is too large (too sensitive) 2.5 > 1.1  ( this log is only available in my branch only)
 
+It's because the selector motor drive has a too large driver_SGTHRS value(too sensitive). so most likely it stopped too early due to resistance, so the solution try to reduce the value (less sensitive).
+In my setup and test, driver_SGTHRS = 86 causes sometimes 1.6 to 2.5mm delta. (Only allow 1mm)
+After reduce driver_SGTHRS to 78, the delta gets smaller like 0.6mm.
+However if we set the value too small, the selector hits the wall harder and a larger noise...so it need to be balanced.
+Recommend value is 60-78.
+YMMV, it all depends on your current setting, and how good are the 8mm rail smooth rod and your linear bearing selector accuracy etc.
 
 ## Other reference
 BTT ERCF
