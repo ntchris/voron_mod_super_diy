@@ -325,7 +325,13 @@ If selector cannot move and have red error inside mainsail
 
 Solution is to set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
-Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a horrible and expensive "Voltage too low" error.
+Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a horrible and expensive "uv_cp=1 under voltage" error.
+More investigation and test shows, with an additional large value of capacitor for the stepper dirver can solve this.
+I soldered a 1000uf/35V large cap along with the stock cap for the stepper driver.
+tested with higher selector speed  (in hw config file ) , and high homing speed (defined in ERCF.py def _home_selector(self) around line 2740 )
+working very well, it never gives another under voltage error, even raise the home speed to 300 (was 60).
+( so it's a good way to trigger / test the under voltage error )
+(increase velocity and accel in hw config selector stepper seems trigger the error. )
 
 
 
@@ -372,8 +378,9 @@ It's because the selector motor drive has a too large driver_SGTHRS value(too se
 In my setup and test, driver_SGTHRS = 86 causes sometimes 1.6 to 2.5mm delta. (Only allow 1mm)
 After reduce driver_SGTHRS to 78, the delta gets smaller like 0.6mm.
 However if we set the value too small, the selector hits the wall harder and a larger noise...so it need to be balanced.
-Recommend value is 60-78.
+Recommend value is 50-78.
 YMMV, it all depends on your current setting, and how good are the 8mm rail smooth rod and your linear bearing selector accuracy etc.
+Also reduce the stepper velocity in hw config file (default 200) seems can reduce the delta.
 
 ## Other reference
 BTT ERCF
