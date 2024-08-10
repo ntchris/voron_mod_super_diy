@@ -8,6 +8,8 @@
 60T pulley drive selector system in action video
 it first does a sensorless home and then move fast from gate 0 and gate 7
 
+<video src="pictures/selector_home_and_move.mp4"></video>
+
 https://youtu.be/REvJzBS2TxI
 
 
