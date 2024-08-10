@@ -126,13 +126,13 @@ should be straight forward, basically just install the stepper motor and the pul
 > gear_ratio: 60:20   <=== add this
 	
 ## Configuration and Calibration
-  If sensorless homing doesn't work well, check the closed loop belt, if the belt is too loose, it cannot transfer the impact from the top 60T pulley to 20T pulley on stepper motor.
-  also check the long open belt on selector and 20T tightness.
-  hold current can be very small since we have 3:1 pulley system, ie hold_current: 0.005
-  if do not set this line, no hold current is set, klipper would use the run current the whole time, I think this is bad, printing and not printing.
-  run_current: 0.400 ( tested 300 to 400 work all good)
-  if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
-  driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
-  feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
+ * If sensorless homing doesn't work well, check the closed loop belt, if the belt is too loose, it cannot transfer the impact from the top 60T pulley to 20T pulley on stepper motor.
+ * also check the long open belt on selector and 20T tightness.
+ * hold current can be very small since we have 3:1 pulley system, ie hold_current: 0.005
+ * if do not set this line, no hold current is set, klipper would use the run current the whole time, I think this is bad, printing and not printing.
+ * run_current: 0.400 ( tested 300 to 400 work all good)
+ * if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
+ * driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
+ * feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
   
   
