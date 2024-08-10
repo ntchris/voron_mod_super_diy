@@ -5,6 +5,10 @@
   ![pulley drive system](pictures/power_drive_overview.png)
   ![pulley drive system overview](pictures/power_drive_1.png)
  
+60T pulley drive selector system in action video
+it first does a sensorless home and then move fast from gate 0 and gate 7
+[https://youtu.be/REvJzBS2TxI]
+
 ## Why (Benefits):
   * Work with any size of Nema14 stepper motor. Nema17 stepper motor mount is not done since I don't have the need, but should be simple to make.
   * much more precise selector movement postion
