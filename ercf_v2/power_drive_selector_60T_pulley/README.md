@@ -8,7 +8,9 @@
 60T pulley drive selector system in action video
 it first does a sensorless home and then move fast from gate 0 and gate 7
 
-[https://youtu.be/REvJzBS2TxI]
+https://youtu.be/REvJzBS2TxI
+
+
 
 
 ## Why (Benefits):
