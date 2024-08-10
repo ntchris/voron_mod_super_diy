@@ -55,7 +55,7 @@ per my test, the selector movement distance delta is now usually from 0mm to 0.1
 only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
 * M4 30mm X 2 
 * M4 lock nuts X 2 
- ![pulley drive system overview](pictures/M4_or_M5.png)
+
 
 ## File list
 ### stl files
@@ -71,11 +71,13 @@ only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
   * CAD step files are provided.
   
 ## Print Setting
-  40% and 4 parameters (same the ercf or voron)
-  material PETG or ABS ( usually I don't use ABS when high temperature resistance is NOT needed)
+  * 40% and 4 parameters (same the ercf or voron's print setting)
+  * material PETG or ABS ( usually I don't use ABS when high temperature resistance is NOT needed), our stepper motor shouldn't produce more than minimum heat with correct setting.
 
 
 ## Optional parts and stl files for M4 screw:
+ ![pulley drive system overview](pictures/M4_or_M5.png)
+ 
   when I work on the project, I realize I don't have the required spare M5 long screws needed in the original design between endblock_bypass and EndBlock_Bypass part. 
   Generally speaking I don't like M5 screws, they are more expensive to buy, and more expensive to ship. therefore I don't have all sorts/length/screw head types of M5 screws in my part storage box. However M4 screw is a totally different story, it's very good for below reasons:
   * it's much cheaper to buy and cheaper to ship
@@ -105,7 +107,10 @@ should be straight forward, basically just install the stepper motor and the pul
   6. adjust stepper motor position, (it can move about 1.6mm) and tighten 4X M3 8mm screws. the 154mm closed belt need to be reasonably tight to make the sensorless homing work.
   now the motor and pulley assembly is finished.
   7. install the finished stepper motor and pulley assembly to the EndBlock_Bypass part ( M4 or M5 30mm screw depends which type you chose to print and use)
-  
+
+   ![pulley drive system overview](pictures/made1.png)
+   ![pulley drive system overview](pictures/made2.png)
+   
 ## Config file change
  * since we now use 60:20 gear ratio, so a new line is needed in the hw config file manual_stepper selector_stepper section -- gear_ratio: 60:20 .
 > manual_stepper selector_stepper section
