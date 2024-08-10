@@ -106,7 +106,7 @@ should be straight forward, basically just install the stepper motor and the pul
   4. install 20T pulley to nema14 stepper motor,do not tighten pulley set screw.
   5. install motor mount part and pulley_mount part to gether. two M3 12mm screws on top (into the M3 nuts),  M3 10mm screw lower (into the heat insert)
    ![pulley drive system overview](pictures/assembly_screws.png)
-  6. adjust stepper motor position, (it can move about 1.6mm) and tighten 4X M3 8mm screws. the 154mm closed belt need to be reasonably tight to make the sensorless homing work.
+  6. adjust stepper motor position, (it can move about 1.6mm) and tighten 4X M3 8mm screws. the 154mm closed belt need to be reasonably tight to make the sensorless homing work. Note, do not use wrong screw types, it may damage stepper motor hole thread. use M3 8mm only.
   now the motor and pulley assembly is finished.
   7. install the finished stepper motor and pulley assembly to the EndBlock_Bypass part ( M4 or M5 30mm screw depends which type you chose to print and use)
 
