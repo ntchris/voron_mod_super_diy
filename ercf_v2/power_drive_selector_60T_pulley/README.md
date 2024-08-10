@@ -99,11 +99,13 @@ should be straight forward, basically just install the stepper motor and the pul
      * insert two bearing into the two holes in layer one and layer two.
      * install  D shaft, and in below order: 20T pulley , nylong wahser , upper bearing(in above step), nylong washer, 60T pulley, nylong washer, closed loop belt in pulley_mount part. lower bearing(in above step).   Do not forget the closed belt.
      * if the D shaft is too difficult to insert into the bearing, can grind the shaft with sand paper to make it slightly smaller. it happens with cheap D shaft and cheap bearing. things cannot automatically and perfectly fit together.
-  
+   ![done making 2](pictures/view_front.jpg)
+   
   3. for the selector motor mount part.
     install stepper motor from above, use 4X M3 8mm long screw to loosely mount, do not tighten, belt tightness need to be adjust later using these 4 screws.
   4. install 20T pulley to nema14 stepper motor,do not tighten pulley set screw.
   5. install motor mount part and pulley_mount part to gether. two M3 12mm screws on top (into the M3 nuts),  M3 10mm screw lower (into the heat insert)
+   ![pulley drive system overview](pictures/assembly_screws.png)
   6. adjust stepper motor position, (it can move about 1.6mm) and tighten 4X M3 8mm screws. the 154mm closed belt need to be reasonably tight to make the sensorless homing work.
   now the motor and pulley assembly is finished.
   7. install the finished stepper motor and pulley assembly to the EndBlock_Bypass part ( M4 or M5 30mm screw depends which type you chose to print and use)
