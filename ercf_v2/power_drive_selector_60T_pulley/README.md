@@ -41,21 +41,21 @@ per my test, the selector movement distance delta is now usually from 0mm to 0.1
 
 ## BOM:
  * cnc 60T pulley (2GT, always 2GT type)
- * one more 20T pulley ( the same type of the original design)
+ * one more 20T pulley ( the same type of the ERCF original design for selector motor)
  * 154mm belt, (2GT close loop)
  * nylong washer M5 0.5mm thick, OD 7mm preferred. 3pcs. or you can print
  * nema14 stepper motor
- * M5 D shaft about 46mm to 50mm long.  if no D shape shaft is available, we can easily grind the place for pulley set screw.
+ * M5 D shaft about 46mm to 50mm long, slightly longer or shorter shouldn't matter. if no D shape shaft is available, we can easily grind the place for pulley set screw.
  * bearing MR115 ( OD 11mm, ID 5mm, height 4mm )   2pcs
  * M3 screws , 8mm 2pcs,  10mm 4pcs, 12mm 2pcs
  * M3 hex nuts X2,
  * M3 heat insert X 2 ( and other heat inserts required by the original design)
- may need a little bit longer open belt (the long open belt for selector) than the orignal ERCF_V2 design
+ * may need a little bit longer open belt (the long open belt for selector) than the orignal ERCF_V2 design, since our 20T pulley is a bit further from the original position, since the 60T pulley need space to stay.
  ### optional 
 only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
 * M4 30mm X 2 
 * M4 lock nuts X 2 
- ![pulley drive system overview](pictures/M4_or_M5.png)
+
 
 ## File list
 ### stl files
@@ -71,11 +71,13 @@ only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
   * CAD step files are provided.
   
 ## Print Setting
-  40% and 4 parameters (same the ercf or voron)
-  material PETG or ABS ( usually I don't use ABS when high temperature resistance is NOT needed)
+  * 40% and 4 parameters (same the ercf or voron's print setting)
+  * material PETG or ABS ( usually I don't use ABS when high temperature resistance is NOT needed), our stepper motor shouldn't produce more than minimum heat with correct setting.
 
 
 ## Optional parts and stl files for M4 screw:
+ ![pulley drive system overview](pictures/M4_or_M5.png)
+ 
   when I work on the project, I realize I don't have the required spare M5 long screws needed in the original design between endblock_bypass and EndBlock_Bypass part. 
   Generally speaking I don't like M5 screws, they are more expensive to buy, and more expensive to ship. therefore I don't have all sorts/length/screw head types of M5 screws in my part storage box. However M4 screw is a totally different story, it's very good for below reasons:
   * it's much cheaper to buy and cheaper to ship
@@ -91,12 +93,12 @@ should be straight forward, basically just install the stepper motor and the pul
   
   1. decide to use M4 or M5 (ERCF default) screws. print all needed parts
   2. for the pulley_mount part
-      insert 2X heat insert in the pulley_mount part lower holes. (these two holes are for stepper motor mount part.)
-      insert other heat inserts according to the ERCF V2 document,I shall not repeat and copy paste all the same steps already in the ERCF doc.
-      insert 2X M3 nut under the pulley_mount part upper hole.
-	  insert two bearing into the two holes in layer one and layer two.
-	  install  D shaft, and in below order: 20T pulley , nylong wahser , upper bearing(in above step), nylong washer, 60T pulley, nylong washer, closed loop belt in pulley_mount part. lower bearing(in above step).   Do not forget the closed belt.
-	  if the D shaft is too difficult to insert into the bearing, can grind the shaft with sand paper to make it slightly smaller. it happens with cheap D shaft and cheap bearing. things cannot automatically and perfectly fit together.
+     * insert 2X heat insert in the pulley_mount part lower holes. (these two holes are for stepper motor mount part.)
+     * insert other heat inserts according to the ERCF V2 document,I shall not repeat and copy paste all the same steps already in the ERCF doc.
+     * insert 2X M3 nut under the pulley_mount part upper hole.
+     * insert two bearing into the two holes in layer one and layer two.
+     * install  D shaft, and in below order: 20T pulley , nylong wahser , upper bearing(in above step), nylong washer, 60T pulley, nylong washer, closed loop belt in pulley_mount part. lower bearing(in above step).   Do not forget the closed belt.
+     * if the D shaft is too difficult to insert into the bearing, can grind the shaft with sand paper to make it slightly smaller. it happens with cheap D shaft and cheap bearing. things cannot automatically and perfectly fit together.
   
   3. for the selector motor mount part.
     install stepper motor from above, use 4X M3 8mm long screw to loosely mount, do not tighten, belt tightness need to be adjust later using these 4 screws.
@@ -105,7 +107,12 @@ should be straight forward, basically just install the stepper motor and the pul
   6. adjust stepper motor position, (it can move about 1.6mm) and tighten 4X M3 8mm screws. the 154mm closed belt need to be reasonably tight to make the sensorless homing work.
   now the motor and pulley assembly is finished.
   7. install the finished stepper motor and pulley assembly to the EndBlock_Bypass part ( M4 or M5 30mm screw depends which type you chose to print and use)
-  
+
+
+   ![done making](pictures/made1.jpg)
+   
+   ![done making 2](pictures/made2.jpg)
+   
 ## Config file change
  * since we now use 60:20 gear ratio, so a new line is needed in the hw config file manual_stepper selector_stepper section -- gear_ratio: 60:20 .
 > manual_stepper selector_stepper section
@@ -119,13 +126,13 @@ should be straight forward, basically just install the stepper motor and the pul
 > gear_ratio: 60:20   <=== add this
 	
 ## Configuration and Calibration
-  If sensorless homing doesn't work well, check the closed loop belt, if the belt is too loose, it cannot transfer the impact from the top 60T pulley to 20T pulley on stepper motor.
-  also check the long open belt on selector and 20T tightness.
-  hold current can be very small since we have 3:1 pulley system, ie hold_current: 0.005
-  if do not set this line, no hold current is set, klipper would use the run current the whole time, I think this is bad, printing and not printing.
-  run_current: 0.400 ( tested 300 to 400 work all good)
-  if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
-  driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
-  feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
+ * If sensorless homing doesn't work well, check the closed loop belt, if the belt is too loose, it cannot transfer the impact from the top 60T pulley to 20T pulley on stepper motor.
+ * also check the long open belt on selector and 20T tightness.
+ * hold current can be very small since we have 3:1 pulley system, ie hold_current: 0.005
+ * if do not set this line, no hold current is set, klipper would use the run current the whole time, I think this is bad, printing and not printing.
+ * run_current: 0.400 ( tested 300 to 400 work all good)
+ * if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
+ * driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
+ * feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
   
   
