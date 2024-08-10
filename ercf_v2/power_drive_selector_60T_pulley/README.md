@@ -41,16 +41,16 @@ per my test, the selector movement distance delta is now usually from 0mm to 0.1
 
 ## BOM:
  * cnc 60T pulley (2GT, always 2GT type)
- * one more 20T pulley ( the same type of the original design)
+ * one more 20T pulley ( the same type of the ERCF original design for selector motor)
  * 154mm belt, (2GT close loop)
  * nylong washer M5 0.5mm thick, OD 7mm preferred. 3pcs. or you can print
  * nema14 stepper motor
- * M5 D shaft about 46mm to 50mm long.  if no D shape shaft is available, we can easily grind the place for pulley set screw.
+ * M5 D shaft about 46mm to 50mm long, slightly longer or shorter shouldn't matter. if no D shape shaft is available, we can easily grind the place for pulley set screw.
  * bearing MR115 ( OD 11mm, ID 5mm, height 4mm )   2pcs
  * M3 screws , 8mm 2pcs,  10mm 4pcs, 12mm 2pcs
  * M3 hex nuts X2,
  * M3 heat insert X 2 ( and other heat inserts required by the original design)
- may need a little bit longer open belt (the long open belt for selector) than the orignal ERCF_V2 design
+ * may need a little bit longer open belt (the long open belt for selector) than the orignal ERCF_V2 design, since our 20T pulley is a bit further from the original position, since the 60T pulley need space to stay.
  ### optional 
 only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
 * M4 30mm X 2 
