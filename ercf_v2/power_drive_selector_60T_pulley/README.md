@@ -99,7 +99,8 @@ should be straight forward, basically just install the stepper motor and the pul
      * insert two bearing into the two holes in layer one and layer two.
      * install  D shaft, and in below order: 20T pulley , nylong wahser , upper bearing(in above step), nylong washer, 60T pulley, nylong washer, closed loop belt in pulley_mount part. lower bearing(in above step).   Do not forget the closed belt.
      * if the D shaft is too difficult to insert into the bearing, can grind the shaft with sand paper to make it slightly smaller. it happens with cheap D shaft and cheap bearing. things cannot automatically and perfectly fit together.
-   ![done making 2](pictures/view_front.jpg)
+       
+   ![done making 2](pictures/view_front.png)
    
   3. for the selector motor mount part.
     install stepper motor from above, use 4X M3 8mm long screw to loosely mount, do not tighten, belt tightness need to be adjust later using these 4 screws.
