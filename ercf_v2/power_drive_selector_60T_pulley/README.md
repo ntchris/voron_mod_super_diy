@@ -134,5 +134,5 @@ should be straight forward, basically just install the stepper motor and the pul
  * if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
  * driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
  * feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
-  
+
   
