@@ -108,8 +108,10 @@ should be straight forward, basically just install the stepper motor and the pul
   now the motor and pulley assembly is finished.
   7. install the finished stepper motor and pulley assembly to the EndBlock_Bypass part ( M4 or M5 30mm screw depends which type you chose to print and use)
 
-   ![pulley drive system overview](pictures/made1.png)
-   ![pulley drive system overview](pictures/made2.png)
+
+   ![done making](pictures/made1.jpg)
+   
+   ![done making 2](pictures/made2.jpg)
    
 ## Config file change
  * since we now use 60:20 gear ratio, so a new line is needed in the hw config file manual_stepper selector_stepper section -- gear_ratio: 60:20 .
