@@ -5,11 +5,11 @@
   ![pulley drive system](pictures/power_drive_overview.png)
   ![pulley drive system overview](pictures/power_drive_1.png)
  
-60T pulley drive selector system in action video
+
+### 60T pulley drive selector system in action video
 it first does a sensorless home and then move fast from gate 0 and gate 7
 
 https://youtu.be/REvJzBS2TxI
-
 
 
 
