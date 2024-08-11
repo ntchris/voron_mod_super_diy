@@ -31,6 +31,7 @@ So the goal of this mod is to make the ERCF V2 selector to work with a larger 28
 Design once, and benefit every single ERCF unit, is better than design small, but every unit please buy a 50$ 100$ expensive high end servo.  
   
 With the larger size (28mm VS 23mm), a servo body can easier to contain larger gears, or more gears, and a larger motor, larger PCB IC driver, therefore it's easier to output larger torque or force. And because all things are easier for servo manufacturers, so a normal quality 28mm servo usually is cheap (6,7,8$, usually advertized 1.6kg ), and a better one is only about 15$ or 20$ ( usually advertized for 6kg, 7kg torque)
+
   ![filament_off_center](pictures/servo_size.jpg)
 
 
