@@ -11,6 +11,9 @@
  picture of selector with 28mm installed in ERCF V2
 ![overview](pictures/overview.jpg)
 
+Video servo up down and selection move in action
+https://youtu.be/HAPLxZFdQQA
+
 ## Why:
   
   ERCF V2 need a stronger servo with reasonable price.
