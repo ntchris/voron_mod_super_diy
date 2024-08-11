@@ -81,7 +81,9 @@ only if plan use M4 screw to mount pulley_mount_default and EndBlock_Bypass
 ## Print Setting
   * 40% and 4 parameters (same the ercf or voron's print setting)
   * material PETG or ABS ( usually I don't use ABS when high temperature resistance is NOT needed), our stepper motor shouldn't produce more than minimum heat with correct setting.
-
+  * no support needed.
+  * all stl files are in correct print orientation, the bottom side is facing down already
+  
 
 ## Optional parts and stl files for M4 screw:
  ![pulley drive system overview](pictures/M4_or_M5.png)
