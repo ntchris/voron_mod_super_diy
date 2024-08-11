@@ -35,7 +35,8 @@ Design once, and benefit every single ERCF unit, is better than design small, bu
   
 With the larger size (28mm VS 23mm), a servo body can easier to contain larger gears, or more gears, and a larger motor, larger PCB IC driver, therefore it's easier to output larger torque or force. And because all things are easier for servo manufacturers, so a normal quality 28mm servo usually is cheap (6,7,8$, usually advertized 1.6kg ), and a better one is only about 15$ or 20$ ( usually advertized for 6kg, 7kg torque)
 
-  ![filament_off_center](pictures/servo_size.jpg)
+  ![servo size](pictures/servo_size.jpg)
+
 
 
 ## Design consideration
@@ -43,6 +44,7 @@ I have to makethe selector body about 1.5mm thicker, to make the wire management
 if we look into the inner body of the ercf v2 original selector, we can see some weird bump on side, that is for the wire channel. this thing makes things difficult. I wiped out the bump part.
 with a thicker body the selector is now slightly stronger, hopefully.
 I also installed it on ERCF V1 it works too
+![selector_bottom](pictures/selector_bottom.jpg)
 
 ## File list
 all stl files are in correct print orientation already, bottom side is facing down.
