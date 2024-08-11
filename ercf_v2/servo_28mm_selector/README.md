@@ -5,7 +5,9 @@
  In the ERCF V2 and V1 design, a 23mm micro servo is used.
  a small servo with that size usually is very weak, not have the required torque or force to push the servo arm and gear down.
  that sometimes creates problems not easy to identify, and causes a lot strange print problems.
- 
+ selector with 28mm installed in ERCF V2
+![filament_off_center](pictures/servo28mm_ercf_V2.jpg)
+
 ## Why:
   
   ERCF V2 need a stronger servo with reasonable price.
