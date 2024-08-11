@@ -52,7 +52,7 @@ all stl files are in correct print orientation already, bottom side is facing do
    
 ### Optional files
    
- * LinearAxisIdler_Block_M4.stl   same as above, but this version works with M4 button head idle screw and hex and M4 idler. I don't have another M5 screw and M5 idler to make my mod. usually I don't like M5 screws, M4 screws are better in many ways. I have a lot M4 screws and M4 idlers. Ignore if you don't plan to use M4 screw/idler.
+ * LinearAxisIdler_Block_M4.stl   same as above, but this version works with M4 button head screw (for idler) and M4 hex and M4 idler. I don't have another M5 screw and M5 idler to make my mod. usually I don't like M5 screws, M4 screws are better in many ways. I have a lot M4 screws and M4 idlers. Ignore if you don't plan to use M4 screw/idler.
  * erec_beat6_encoder_mount_for_thicker_selector_28mm  make EREC filament cutter part to work with our modded selector body. our selector body is slightly thicker than the original. ignore if you don't use EREC filament cutter. ( ERCF_Filament_Cutter https://github.com/kevinakasam/ERCF_Filament_Cutter/tree/main )
 	  
 ###  CAD source files
