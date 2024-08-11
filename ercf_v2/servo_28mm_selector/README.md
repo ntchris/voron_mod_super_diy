@@ -9,7 +9,7 @@
  that sometimes creates problems not easy to identify, and causes a lot strange print problems.
  This mod make it support a larger , 28mm or 17g servo. 
  picture of selector with 28mm installed in ERCF V2
-![filament_off_center](pictures/servo28mm_ercf_V2.jpg)
+![overview](pictures/overview.jpg)
 
 ## Why:
   
@@ -72,9 +72,9 @@ ercf_selector_and_servo_test.gcode to home and do servo down servo up in every s
   * not all 28mm servos are made the same. some are more expensive, some have bearing on output shaft, some are using just plastic case act as bearing.
     * I am guessing, if a servo's the top body part is full and flat, it may have more gears; if top body part is just a round shape, it has less gears (less torque, lower cost, cheaper). I recommend buy the ones with more gears but they are usually a bit more expensive. YMMV
     * below picture, the servo has half top body part, meaning it has less gears. usually cheaper, also Should be enough force
-    ![filament_off_center](pictures/less_gears.jpg)
+    ![less gears](pictures/less_gears.jpg)
     * below picture, the servo has a full flat top body part, meaning it may has more gears (better, more torque), this servo even has a bearing, that's even better. so this one should be better
-    ![filament_off_center](pictures/more_gears.jpg)
+    ![more gears](pictures/more_gears.jpg)
     * also can check servo mounting arm, thicker arm May mean more torque. I saw some arms are 1.6mm , 1.8mm and 2mm.
 	
 ## Assembly Steps
@@ -121,10 +121,10 @@ if servo arm cannot push down correctly. check below things
  * no other improvement or even a 30mm 40mm larger stronger super servo makes sense with above problems existing.
 
 selector with 28mm installed in ERCF V1
-![filament_off_center](pictures/servo28mm_ercf_V1.jpg)
+![v1](pictures/servo28mm_ercf_V1.jpg)
 
 selector with 28mm installed in ERCF V2
-![filament_off_center](pictures/servo28mm_ercf_V2.jpg)
+![v2](pictures/servo28mm_ercf_V2.jpg)
    
    
 ### other optional enhancement
