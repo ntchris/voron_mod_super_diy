@@ -65,8 +65,12 @@ ercf_selector_and_servo_test.gcode to home and do servo down servo up in every s
    The servo's accessory bag usually doesn't contain this right type of screw. they are usually larger and longer, cannot fit in our selector body.
   * a 28mm servo, 28mm means the main body size width, not the mounting part/mounting arm or hole. 
   * not all 28mm servos are made the same. some are more expensive, some have bearing on output shaft, some are using just plastic case act as bearing.
-  * I am guessing, if a servo's the top body part is full and flat, it may have more gears; if top body part is just a round shape, it has less gears (less torque, lower cost, cheaper). I recommend buy the ones with more gears but they are usually a bit more expensive. YMMV
-  * 
+    * I am guessing, if a servo's the top body part is full and flat, it may have more gears; if top body part is just a round shape, it has less gears (less torque, lower cost, cheaper). I recommend buy the ones with more gears but they are usually a bit more expensive. YMMV
+    * below picture, the servo has half top body part, meaning it has less gears. usually cheaper, also Should be enough force
+    ![filament_off_center](pictures/less_gears.jpg)
+    * below picture, the servo has a full flat top body part, meaning it may has more gears (better, more torque), this servo even has a bearing, that's even better. so this one should be better
+    ![filament_off_center](pictures/more_gears.jpg)
+    * also can check servo mounting arm, thicker arm May mean more torque. I saw some arms are 1.6mm , 1.8mm and 2mm.
 	
 ## Assembly Steps
 
