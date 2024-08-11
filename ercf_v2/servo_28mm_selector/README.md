@@ -1,7 +1,9 @@
 # ERCF V2 selector mod for larger 28mm (17g) servo
 
 ## What:
- for ERCF V2 enraged rabbit multimaterial system.
+ for ERCF V2 enraged rabbit multimaterial system.  
+ https://github.com/Enraged-Rabbit-Community/ERCF_v2 
+ 
  In the ERCF V2 and V1 design, a 23mm micro servo is used.
  a small servo with that size usually is very weak, not have the required torque or force to push the servo arm and gear down.
  that sometimes creates problems not easy to identify, and causes a lot strange print problems.
