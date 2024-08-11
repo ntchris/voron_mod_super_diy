@@ -93,9 +93,10 @@ ercf_selector_and_servo_test.gcode to home and do servo down servo up in every s
 * Run ERCF_TEST_SERVO VALUE=50 , watch, and 60 watch, and 70 and more and watch, run it and watch servo arm, find a degree for servo arm to correctly push down the filament block top hat part. 
 * Your millage may vary but my up and down angle is about 73 degree. 
 * after servo up and down degree is set in the ercf parameter file, restart firmware to make it effective.
-* run servo up and look at servo arm NOT touching the servo body. If it touches it, it may try hard to reach an impossible position, servo will get damage. check the body temperature for 1-2-3 minutes, it shouldn't be hot at all. If servo arm try to touch the body, increase the up degree by 1 or 2 and test again.
-* run servo down and check servo body temperature for 1-2-3 minutes, it shouldn't be hot at all. If servo arm try to reach a impossible position, reduce the degree by 1 or 2 and test again.
-* more power, easier to get damaged, need to be more careful. servo angle need to be treated carefully, it must be correct.
+* run ercf_servo_up,  and look at servo arm NOT touching the servo body. If it touches it, it may try hard to reach an impossible position, servo will get damage. check the body temperature for 1-2-3 minutes, it shouldn't be hot at all. If servo arm try to touch the body, increase the up degree by 1 or 2 and test again.
+* run servo down, and let it stay, check servo body temperature for 1-2-3-4-5 minutes, it shouldn't be hot at all. If servo arm try to reach a impossible position, reduce the degree by 1 or 2 and test again. it shouldn't be colder than warm. Hot is not acceptable.
+* more power, means easier to get damaged, need to be more careful. servo angle need to be treated carefully, it must be correct.
+* If possible, can use lab DC power supply to test servo current, when in UP and Down position, the current draw should not be larger than 100ma. If current is more than that, it means the servo is trying to go to a position that it couldn't. the angle need adjust. If no power supply or too lazy to work the wires, can just feel the servo body temperature.
 	 
 ### adjust all filament block's postion setting in ERCF parameter file.
  the new selector body is 1.5mm thicker than the original one in ERCF V2, therefore I'm afraid the value in the file need change accordingly and test.
