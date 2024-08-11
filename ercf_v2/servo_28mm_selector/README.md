@@ -1,4 +1,4 @@
-# ERCF V2 selector mod for larger 28mm servo
+# ERCF V2 selector mod for larger 28mm (17g) servo
 
 ## What:
  for ERCF V2 enraged rabbit multimaterial system.
@@ -18,13 +18,13 @@
  
 Also in our application, a multi-material system, 
 * servo size doesn't matter or shouldn't matter, it's not a RC car, space is not extremely limited by the nature of the application; 
-* servo weight doesn't matter, it's are not a RC helicopter,
-* servo speed doesn't matter at all, 0.01 sec VS 1 sec push down the filament gear doesn't effect print speed or filament change speed.
+* servo weight doesn't matter, it's not a RC helicopter
+* servo speed doesn't matter at all, 0.01 sec VS 0.1 sec push down the filament gear doesn't effect print speed or filament change speed.
 so a lot of high end expensive servo's features are meaningless in our application, big money is wasted if we buy those.
 ERCF only need enough force.
   
 ### make it work with low price.
-So the goal of this mod is to make the ERCF V2 selector to work with a larger 28mm servo, a regular one, with reasonable or low price, so we can buy a cheap servo and have larger torque.
+So the goal of this mod is to make the ERCF V2 selector to work with a larger 28mm servo (17g servo), a regular one, with reasonable or low price, so we can buy a cheap servo ( or a few servos) and have larger torque.
 Design once, and benefit every single ERCF unit, is better than design small, but every unit please buy a 50$ 100$ expensive high end servo.  
   
 With the larger size (28mm VS 23mm), a servo body can easier to contain larger gears, or more gears, and a larger motor, larger PCB IC driver, therefore it's easier to output larger torque or force. And because all things are easier for servo manufacturers, so a normal quality 28mm servo usually is cheap (6,7,8$, usually advertized 1.6kg ), and a better one is only about 15$ or 20$ ( usually advertized for 6kg, 7kg torque)
