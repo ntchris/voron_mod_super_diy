@@ -26,12 +26,14 @@ So the goal of this mod is to make the ERCF V2 selector to work with a larger 28
 Design once, and benefit every single ERCF unit, is better than design small, but every unit please buy a 50$ 100$ expensive high end servo.  
   
 With the larger size (28mm VS 23mm), a servo body can easier to contain larger gears, or more gears, and a larger motor, larger PCB IC driver, therefore it's easier to output larger torque or force. And because all things are easier for servo manufacturers, so a normal quality 28mm servo usually is cheap (6,7,8$, usually advertized 1.6kg ), and a better one is only about 15$ or 20$ ( usually advertized for 6kg, 7kg torque)
+  ![filament_off_center](pictures/servo_size.jpg)
 
 
 ## Design consideration
 I have to makethe selector body about 1.5mm thicker, to make the wire management channel work better, and the inner body simpler.
 if we look into the inner body of the ercf v2 original selector, we can see some weird bump on side, that is for the wire channel. this thing makes things difficult. I wiped out the bump part.
 with a thicker body the selector is now slightly stronger, hopefully.
+I also installed it on ERCF V1 it works too
 
 ## File list
 all stl files are in correct print orientation already, bottom side is facing down.
@@ -100,12 +102,20 @@ if servo arm cannot push down correctly. check below things
 * when push down, servo arm must not touch other top hat part, it should only push down the selected filament block's top hat part. If it touches the adjacement top hat part, obviously that part blocks it. need correctly set the value of the selector filament position.
 * load a piece of filament inside filament block, check filament is exactly in the middle of the bondtech gear teeth, the correct position.
  If it's not in the correct position, obviously the filament is higher, therefore servo arm and top hat cannot push down. Check ERCF V2 manual page 69.
-* In below picture the filament is a little bit too left, so we need to loose the bondtech gear set screw and move it a little to right, can hold down the filament hard to help to position the gear. May use weak type thread locker (222, purple etc) liquid.
-* Do not recommend use medium strength type.
-  ![filament_off_center](pictures/filament_off_center.jpg)
+* In below picture the filament is a little bit too left, so we need to loose the bondtech gear set screw and move it a little to right, can hold down the filament hard to help to position the gear. May use weak type thread locker (222, purple etc) liquid. Do not recommend use medium strength type.
+   ercf V1 filament block is shown, but the idea is the same
+   ![filament_off_center](pictures/filament_off_center.jpg)
  
- * if servo arm's contact surface is coarse, can use file/sandpaper a bit to make it smooth, it should be easier to move on the surface of top hat part.
+ 
+ * if servo arm's contact surface is too coarse, can use file/sandpaper a bit to make it smooth, it should be easier to move on the surface of top hat part.
  * no other improvement or even a 30mm 40mm larger stronger super servo makes sense with above problems existing.
+
+selector with 28mm installed in ERCF V1
+![filament_off_center](pictures/servo28mm_ercf_V1.jpg)
+
+selector with 28mm installed in ERCF V2
+![filament_off_center](pictures/servo28mm_ercf_V2.jpg)
+   
    
 ### other optional enhancement
 
