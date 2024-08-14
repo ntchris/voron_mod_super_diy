@@ -327,6 +327,7 @@ Solution is to set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (i
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
 Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a 
 horrible and expensive "uv_cp=1 under voltage" error.
+Per my test, it seems higher run_current require lower driver_SGTHRS value(less sensitive), lower run_current require higher driver_SGTHRS value (more sensitive).
 
 
 #### uv_cp=1 under voltage
