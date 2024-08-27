@@ -1,0 +1,114 @@
+
+18:23:43   DEBUG: MMU PAUSE wrapper called
+18:23:49   DEBUG: Retracting 2.0mm
+18:23:49   DEBUG: Saving toolhead gcode state and position (X:246.0 Y:248.6 Z:3.6 E:32.7) for pause
+18:23:49   DEBUG: Lifting toolhead 5.0mm with 5.0mm ramp (speed:150, accel:5000)
+18:23:49 > CANCEL_PRINT
+18:23:49   DEBUG: MMU_CANCEL_PRINT wrapper called
+18:23:50   DEBUG: Setting servo to up (filament released) position at angle: 9
+18:23:50   DEBUG: Unsyncing gear stepper and extruder
+18:23:50   DEBUG: Setting gear motor rotation distance: 20.000000 (ratio: 1.000000)
+18:23:50 Restoring MMU gear stepper run current to 100% configured
+18:23:51   DEBUG: Job State: PRINTING -> CANCELLED (MMU State: Encoder: Disabled, Synced: False, Paused temp: None, Resume to state: ready, Position saved: None, z_height saved: -1.00mm, pause_resume: False, Idle timeout: 3600.00s)
+19:03:38   DEBUG: Found tmc2209 on selector_stepper. Stallguard 'touch' homing possible.
+19:03:38   DEBUG: Found tmc2209 on gear_stepper. Current control enabled. Stallguard 'touch' homing possible.
+19:03:38   DEBUG: Found tmc2209 on extruder. Current control enabled. Stallguard 'touch' homing possible.
+19:03:38   DEBUG: Loaded saved gear rotation distance: 20.000000
+19:03:38   DEBUG: Loaded saved encoder resolution: 1.002088
+19:03:38   DEBUG: Loaded saved selector offsets: [0.8, 24, 47, 70.2, 93.6, 116.4, 139.4, 162.6]
+19:03:38   DEBUG: Loaded saved bypass offset: 176.0
+19:03:38   DEBUG: Loaded saved reference bowden length: 1070.0
+19:03:38   DEBUG: Loaded persisted MMU state, level: 4
+19:03:38   DEBUG: Setting gear motor rotation distance: 20.000000 (ratio: 1.000000)
+19:03:38   DEBUG: 
+19:03:38   DEBUG: handle_ready() has both expand and compress sensor state_tension=0 state_compression=0
+19:03:38   DEBUG: has both tension sensors, and sync_auto_adjust_rotation_dist is True
+19:03:40 > __MMU_BOOTUP_TASKS
+19:03:40 (\_/)
+         ( *,*)
+         (")_(") Happy Hare v2.7.0 Ready...
+19:03:40 Gates: | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+         Tools: |T0 |T1 |T2 |T3 |T4 |T5 |T6 |T7 |
+         Avail: | S | ? | ? | ? | ? | ? | ? | S |
+         Selct: ----------------------------| * | T7
+19:03:40 [T7] > En >>>>>>>>> [Ex >>> Nz] LOADED 0.0mm (e:5.0mm)
+19:03:40   DEBUG: Job State: READY -> INITIALIZED (MMU State: Encoder: Enabled, Synced: False, Paused temp: None, Resume to state: ready, Position saved: None, z_height saved: -1.00mm, pause_resume: False, Idle timeout: 3600.00s)
+19:03:40   DEBUG: Setting servo to move (filament hold) position at angle: 9
+19:03:41 > MMU_STATS COUNTER=mmu_restarts INCR=1
+19:03:41 > MMU_STATS COUNTER=servo_down LIMIT=5000 WARNING="Inspect servo arm for wear/damage"
+19:03:41 > MMU_STATS COUNTER=cutter_blade LIMIT=3000 WARNING="Inspect/replace filament cutting blade"
+19:04:39   DEBUG: Job State: INITIALIZED -> STARTED (MMU State: Encoder: Enabled, Synced: False, Paused temp: None, Resume to state: ready, Position saved: None, z_height saved: -1.00mm, pause_resume: False, Idle timeout: 3600.00s)
+19:06:29 > _MMU_PRINT_START
+19:06:29   DEBUG: Setting servo to down (filament drive) position at angle: 83
+19:06:29 > MMU_STATS COUNTER=servo_down INCR=1
+19:06:29   DEBUG: Syncing gear stepper and extruder
+19:06:29   DEBUG: _enable_sync_feedback() sync sensor state_expanded=1   state_compressed=0
+19:06:29 filament sync state is: expanded (-1)
+19:06:29 Modifying MMU gear stepper run current to 70% for extruder syncing
+19:06:30 Happy Hare initialized ready for print (initial tool T7 loaded)
+19:06:30   DEBUG: Job State: STARTED -> PRINTING (MMU State: Encoder: Enabled, Synced: True, Paused temp: None, Resume to state: ready, Position saved: None, z_height saved: -1.00mm, pause_resume: False, Idle timeout: 3600.00s)
+19:06:32   DEBUG: update_sync_rotation_dist() expanded state=-1(expanded) to return bad compressed(the other dir) val 10.0(to give more filament), tension counter=1
+19:06:32 set_gate_rotation_dist() setting gear motor rotation distance: 10.000000
+19:06:40   DEBUG: get_rotation_dist_on_state_change() working last_state=-1(expanded) state=0(neutral)
+19:06:40 using bad compressed 10.0 and bad expanded 30.0 to avg: new better rotation_dist:20.0
+19:06:40 set_gate_rotation_dist() setting gear motor rotation distance: 20.000000
+19:07:46   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=1(compressed)
+19:07:46   DEBUG: tension state changed to compressed (from neutral), record current rota_dist as new bad compressed val:20.0(current rota dist)
+19:07:48   DEBUG: update_sync_rotation_dist() compressed state=1.0(compressed) to return bad expanded val(the other dir) 30.0 (to give less filament), tension counter=1
+19:07:48 set_gate_rotation_dist() setting gear motor rotation distance: 30.000000
+19:08:33   DEBUG: get_rotation_dist_on_state_change() working last_state=1.0(compressed) state=0(neutral)
+19:08:33 using bad compressed 20.0 and bad expanded 30.0 to avg: new better rotation_dist:25.0
+19:08:33 set_gate_rotation_dist() setting gear motor rotation distance: 25.000000
+19:10:44   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=-1(expanded)
+19:10:44   DEBUG: tension state changed to expanded (from neutral), record current rota_dist as new bad expanded val:25.0(current rota dist)
+19:10:45   DEBUG: update_sync_rotation_dist() expanded state=-1.0(expanded) to return bad compressed(the other dir) val 20.0(to give more filament), tension counter=1
+19:10:45 set_gate_rotation_dist() setting gear motor rotation distance: 20.000000
+19:11:32   DEBUG: get_rotation_dist_on_state_change() working last_state=-1.0(expanded) state=0(neutral)
+19:11:32 using bad compressed 20.0 and bad expanded 25.0 to avg: new better rotation_dist:22.5
+19:11:32 set_gate_rotation_dist() setting gear motor rotation distance: 22.500000
+19:18:36   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=1(compressed)
+19:18:36   DEBUG: tension state changed to compressed (from neutral), record current rota_dist as new bad compressed val:22.5(current rota dist)
+19:18:36   DEBUG: update_sync_rotation_dist() compressed state=1.0(compressed) to return bad expanded val(the other dir) 25.0 (to give less filament), tension counter=1
+19:18:36 set_gate_rotation_dist() setting gear motor rotation distance: 25.000000
+19:19:52   DEBUG: get_rotation_dist_on_state_change() working last_state=1.0(compressed) state=0(neutral)
+19:19:52 using bad compressed 22.5 and bad expanded 25.0 to avg: new better rotation_dist:23.75
+19:19:52 set_gate_rotation_dist() setting gear motor rotation distance: 23.750000
+19:23:46   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=-1(expanded)
+19:23:46   DEBUG: tension state changed to expanded (from neutral), record current rota_dist as new bad expanded val:23.75(current rota dist)
+19:23:46   DEBUG: update_sync_rotation_dist() expanded state=-1.0(expanded) to return bad compressed(the other dir) val 22.5(to give more filament), tension counter=1
+19:23:46 set_gate_rotation_dist() setting gear motor rotation distance: 22.500000
+19:26:00   DEBUG: in trouble get out of expanded state? self.stayed_in_tension_count=41(too long time), make known badcompressed value smaller 2.0%, now 22.05(was 22.5)
+19:26:00   DEBUG: update_sync_rotation_dist() expanded state=-1.0(expanded) to return bad compressed(the other dir) val 22.05(to give more filament), tension counter=0
+19:26:00 set_gate_rotation_dist() setting gear motor rotation distance: 22.050000
+19:26:45   DEBUG: get_rotation_dist_on_state_change() working last_state=-1.0(expanded) state=0(neutral)
+19:26:45 using bad compressed 22.05 and bad expanded 23.75 to avg: new better rotation_dist:22.9
+19:26:45 set_gate_rotation_dist() setting gear motor rotation distance: 22.900000
+20:26:34   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=1(compressed)
+20:26:34   DEBUG: tension state changed to compressed (from neutral), record current rota_dist as new bad compressed val:22.9(current rota dist)
+20:26:34   DEBUG: update_sync_rotation_dist() compressed state=1.0(compressed) to return bad expanded val(the other dir) 23.75 (to give less filament), tension counter=1
+20:26:34 set_gate_rotation_dist() setting gear motor rotation distance: 23.750000
+20:29:10   DEBUG: get_rotation_dist_on_state_change() working last_state=1.0(compressed) state=0(neutral)
+20:29:10 using bad compressed 22.9 and bad expanded 23.75 to avg: new better rotation_dist:23.325
+20:29:10 set_gate_rotation_dist() setting gear motor rotation distance: 23.325000
+20:38:56   DEBUG: get_rotation_dist_on_state_change() working last_state=0.0(neutral) state=-1(expanded)
+20:38:56   DEBUG: tension state changed to expanded (from neutral), record current rota_dist as new bad expanded val:23.325(current rota dist)
+20:38:57   DEBUG: update_sync_rotation_dist() expanded state=-1.0(expanded) to return bad compressed(the other dir) val 22.9(to give more filament), tension counter=1
+20:38:57 set_gate_rotation_dist() setting gear motor rotation distance: 22.900000
+20:42:52   DEBUG: in trouble get out of expanded state? self.stayed_in_tension_count=41(too long time), make known badcompressed value smaller 2.0%, now 22.441999999999997(was 22.9)
+20:42:52   DEBUG: update_sync_rotation_dist() expanded state=-1.0(expanded) to return bad compressed(the other dir) val 22.441999999999997(to give more filament), tension counter=0
+20:42:52 set_gate_rotation_dist() setting gear motor rotation distance: 22.442000
+20:45:01   DEBUG: get_rotation_dist_on_state_change() working last_state=-1.0(expanded) state=0(neutral)
+20:45:01 using bad compressed 22.441999999999997 and bad expanded 23.325 to avg: new better rotation_dist:22.883499999999998
+20:45:01 set_gate_rotation_dist() setting gear motor rotation distance: 22.883500
+21:24:57 > PAUSE
+21:24:57   DEBUG: MMU PAUSE wrapper called
+21:25:03   DEBUG: Retracting 2.0mm
+21:25:04   DEBUG: Saving toolhead gcode state and position (X:246.0 Y:248.6 Z:35.9 E:16.5) for pause
+21:25:04   DEBUG: Lifting toolhead 5.0mm with 5.0mm ramp (speed:150, accel:5000)
+21:25:04 > CANCEL_PRINT
+21:25:04   DEBUG: MMU_CANCEL_PRINT wrapper called
+21:25:05   DEBUG: Setting servo to up (filament released) position at angle: 9
+21:25:05   DEBUG: Unsyncing gear stepper and extruder
+21:25:05   DEBUG: Setting gear motor rotation distance: 20.000000 (ratio: 1.000000)
+21:25:05 Restoring MMU gear stepper run current to 100% configured
+21:25:05   DEBUG: Job State: PRINTING -> CANCELLED (MMU State: Encoder: Disabled, Synced: False, Paused temp: None, Resume to state: ready, Position saved: None, z_height saved: -1.00mm, pause_resume: False, Idle timeout: 3600.00s)
