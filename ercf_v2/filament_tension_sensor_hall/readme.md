@@ -57,7 +57,7 @@ with the correct software support, the filament shall forever remain in neutral.
 ## BOM
 * 2CMX8CM prototype double side PCB .  for easier electronics part of the work, use this standard size one, can be bought from a lot of places, cheap.
 * round magnet : 3mm diameter 2mm thick X 1pcs
-* hall effect sensor X 2pcs, SMD SOT23 , I think through hole type works too( I use 44E (full name HAL3144E SMD SOT23,  TH type can use  A3144 ), the names are similar but they are from different manufacturers.
+* hall effect sensor X 2pcs, SMD SOT23 , I think through hole type works too( I use 44E (full name HAL3144E SMD SOT23,  TH type can use  A3144 ), the names are similar but they are from different manufacturers. Must be Digital, and not analog hall sensors.
 * optional but highly recommended , two LEDs with different colors.  SMD 1206 size RED BLUE or GREEN or other colors,  or through hole type 3mm LEDs ( red blue green etc choose two different colors)
 * SMD or TH resistors for LED 4K resistance X 2  (value can be more or less)
 * XH254  1X 4pin  XH254 socket  on PCB 
