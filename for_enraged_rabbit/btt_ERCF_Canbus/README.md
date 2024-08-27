@@ -325,14 +325,20 @@ If selector cannot move and have red error inside mainsail
 
 Solution is to set the current higher (ie 0.55, 0.6 ) and driver_SGTHRS lower (ie 60, 70, 80)
 If current is too low and driver is too sensitive, it cannot move because the resistance/friction is too high.
-Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a horrible and expensive "uv_cp=1 under voltage" error.
-More investigation and test shows, with an additional large value of capacitor for the stepper dirver can solve this.
-I soldered a 1000uf/35V large cap along with the stock cap for the stepper driver.
-tested with higher selector speed  (in hw config file ) , and high homing speed (defined in ERCF.py def _home_selector(self) around line 2740 )
-working very well, it never gives another under voltage error, even raise the home speed to 300 (was 60).
-( so it's a good way to trigger / test the under voltage error )
-(increase velocity and accel in hw config selector stepper seems trigger the error. )
+Warning, absolutely don't set the current value too high ( 1.0?? 1.2?? ) , it may damage the TMC2209 driver, and causes a 
+horrible and expensive "uv_cp=1 under voltage" error.
+Per my test, it seems higher run_current require lower driver_SGTHRS value(less sensitive), lower run_current require higher driver_SGTHRS value (more sensitive).
 
+
+#### uv_cp=1 under voltage
+many reason can cause this, many people encountered this and shared their experience and solution.
+but here is something I didn't find in internet search.
+* add capacitor in 24V power rail, maybe close to the stepper driver tmc2209.  with an additional large value of capacitor for the stepper dirver can improve this.
+* it happens with sensorless homing.
+* caused by sensorless homing and low hold_current, with lower value (or maybe delta between run_current and hold_current), the error is triggered.
+for example, in my setup, 0.280 run current and 0.080 hold current is good(do sensorless home for many time, no error), but 0.050 hold current has small chance of the error, 0.020 has very high chance. 0.0 hold current is not allow by klipper.
+It's not healthy to have a high hold current since it keeps that current all the time, wasting energy and make stepper motor hot. so if you don't like high hold current, use sensor homing(with micro switch), not use sensoreless homing.
+* bad stepper motor wire connector or wire clamping.
 
 
 #### Mainsail cannot boot, firmware restart / restart error in webpage.

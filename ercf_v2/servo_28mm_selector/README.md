@@ -37,6 +37,7 @@ With the larger size (28mm VS 23mm), a servo body can easier to contain larger g
 
   ![servo size](pictures/servo_size.jpg)
 
+  ![servo size](pictures/view3.jpg)
 
 
 ## Design consideration

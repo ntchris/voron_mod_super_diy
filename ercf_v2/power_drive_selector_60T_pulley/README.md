@@ -147,5 +147,5 @@ should be straight forward, basically just install the stepper motor and the pul
  * if run_current is set too low, it cannot drive the selector run with higher velocity and accel. I use velocity: 250 and accel: 200
  * driver_SGTHRS:75  higher value means more sensitive and easier to be stopped.  lower value means it's harder to be stopped.
  * feel free to experiment different driver_SGTHRS values and run_current, yes they are related per my understanding.
-
+ * if sensorless homing give you a horrible cp=1 under voltage error all the time, check this document: https://github.com/ntchris/voron_mod_super_diy/blob/main/for_enraged_rabbit/btt_ERCF_Canbus/README.md   In short, if everything is correct, change the hold current (increase) see if it can fix it, or use physical micro switch sensor homing.
   
