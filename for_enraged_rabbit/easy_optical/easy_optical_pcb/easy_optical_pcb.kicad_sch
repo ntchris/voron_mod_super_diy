@@ -1859,9 +1859,9 @@
 		)
 		(uuid "f9af09b7-b09d-496f-924c-c07160fb1054")
 	)
-	(text "if 500R is too bright for a 3mm led, ...it should be too bright for optical sensor!!"
+	(text "cannot be too small. 750 works  1.1k not working."
 		(exclude_from_sim no)
-		(at 71.12 110.49 0)
+		(at 72.39 62.992 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2203,7 +2203,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "680"
 			(at 99.568 78.6821 0)
 			(effects
 				(font

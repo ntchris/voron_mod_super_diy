@@ -143,3 +143,11 @@ If needed, can consider below optional enhancement to make servo work even bette
 	 
 	 
      
+### update 2024 Sep 13
+ more tests shows, since the servo cannot touch the ERCF V2's filament block top hat brake release, servo up command cannot release the brake, filament is locked even servo arm is in UP position.
+ a work around is to remove and disable the ERCF V2's brake:
+ * remove the brake part's set screw for every filament block
+ * use a file to make the brake part hole larger. install the brake part back.
+ * if you don't like the brake function, removing it is good enough. However if you do like the brake function very very much, version2 solved this problem.
+ 
+ 
