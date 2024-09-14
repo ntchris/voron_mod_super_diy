@@ -9,6 +9,14 @@
   * other than the brake release, there is no other significant benefit using version2. if you don't like the brake at all , version 1 is good enough, just remove the brake.
   * For people using EREC filament cutter mod, like me, the encoder case right half mod is provided. since the encoder must have a longer input hole to reach the filament block.
   
+  
+### Software config
+
+because now the selector part is about 5mm lefter, need to change mmu_parameters.cfg file
+gate_parking_distance was 8, need to change it to 14, or try and adjust
+gate_parking_distance: 14.0   # 8 old. OK Parking position in the gate (distance back from gate endstop/encoder point)
+
+
 
 ## What:
  for ERCF V2 enraged rabbit multimaterial system.  
