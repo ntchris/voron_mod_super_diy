@@ -16,3 +16,5 @@
   * to remove the built in support in the beta7 design, which is quite difficult to remove and dangerous, the modified gear part now can be just printed, without any support. 
   * in beta7 , the cutter blade/knife need to be cutted or break the front tip, which is very dangerous and not convenient. this mod removed this requirement, not needed.
   
+  * no change for servo mount part.
+  
